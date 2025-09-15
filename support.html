@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Echoboard Support</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #333;
+    }
+    h1, h2 {
+      color: #222;
+    }
+    a {
+      color: #0066cc;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+      text-align: center;
+    }
+    .card {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Echoboard Support</h1>
+  <p>Welcome to the support page for the <strong>Echoboard</strong> app. If you’re experiencing issues, please check the resources below or contact us directly.</p>
+
+  <div class="card">
+    <h2>Frequently Asked Questions</h2>
+    <ul>
+      <li><strong>How do I add a new sound?</strong><br>Open the app, tap the <em>+</em> button, and record or upload a sound file.</li>
+      <li><strong>Why can’t I access premium themes?</strong><br>Premium themes are unlocked through an in-app purchase. Once purchased, restart the app to apply the new theme.</li>
+      <li><strong>My sounds aren’t saving.</strong><br>Make sure you’ve granted storage permissions in your device settings.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Contact Support</h2>
+    <p>If you need more help, please reach out:</p>
+    <ul>
+      <li>Email: <a href="mailto:dedsmed@gmail.com">dedsmed@gmail.com</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    &copy; <span id="year"></span> Echoboard. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
