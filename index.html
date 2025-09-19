@@ -1,47 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My App Developer Site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Echoboard — App Studio</title>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="Echoboard — a fast, modern custom soundboard. Record, edit, and trigger your own sounds with style." />
+  <meta property="og:title" content="Echoboard — App Studio" />
+  <meta property="og:description" content="Record, edit, and trigger your own sounds with style." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/" />
+
+  <!-- Google Icons & Materialize CSS (no SRI to avoid blocking) -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/css/materialize.min.css" />
+
+  <!-- Brand tweaks -->
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      text-align: center;
+    :root {
+      --brand: #6c4cff;
+      --brand-dark: #5436e8;
+      --bg-grad-1: #0f1020;
+      --bg-grad-2: #1b1536;
+      --glass: rgba(255,255,255,0.06);
+      --text-strong: #ffffff;
+      --text-muted: #c9c9d6;
     }
-    h1 {
-      color: #333;
+    .hero {
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(255,255,255,0.06), transparent 40%),
+                  radial-gradient(1000px 500px at 90% 0%, rgba(255,255,255,0.04), transparent 35%),
+                  linear-gradient(160deg, var(--bg-grad-1), var(--bg-grad-2));
+      color: var(--text-strong);
+      padding: 84px 0 40px;
+      position: relative;
+      overflow: hidden;
     }
-    a {
-      color: #0066cc;
-      text-decoration: none;
+    .chip.brand {
+      background: rgba(108, 76, 255, 0.15);
+      color: #e7e4ff;
+      border: 1px solid rgba(108, 76, 255, 0.35);
     }
-    a:hover {
-      text-decoration: underline;
+    .hero .cta .btn-large { background: var(--brand); }
+    .hero .cta .btn-large:hover { background: var(--brand-dark); }
+    .glass {
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      backdrop-filter: blur(8px);
     }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #777;
+    .feature-card { border-radius: 16px; overflow: hidden; }
+    .feature-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: rgba(108, 76, 255, 0.12); color: #bdb7ff; margin-bottom: 10px;
+    }
+    .badge-row img { height: 44px; width: auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35)); }
+    .footer-links a { color: var(--text-muted); }
+    .footer-links a:hover { color: #fff; }
+    footer { background: #0b0c16; color: var(--text-muted); padding: 32px 0; }
+    .store-badges .col { text-align: center; margin-bottom: 16px; }
+    @media (prefers-color-scheme: light) {
+      .hero { color: #111; }
+      .glass { background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.07); }
+      .footer-links a { color: #555; }
+      footer { background: #fafafa; color: #666; }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to My App Developer Site</h1>
-  <p>This page is hosted on GitHub Pages.</p>
-  <p>You can view our <a href="/app-ads.txt">app-ads.txt</a> file here.</p>
-  
+  <!-- Navbar -->
+  <nav class="nav-wrapper" style="background: #0b0c16;">
+    <div class="container">
+      <a href="/" class="brand-logo">
+        <i class="material-icons" style="vertical-align: text-bottom;">graphic_eq</i>
+        Echoboard
+      </a>
+      <a href="#" data-target="mobile-nav" class="sidenav-trigger" aria-label="Open navigation">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#screens">Screens</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a class="btn waves-effect" style="background: var(--brand);" href="#download">Download</a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#screens">Screens</a></li>
+    <li><a href="/support.html">Support</a></li>
+    <li><a href="#download">Download</a></li>
+  </ul>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m7">
+          <div class="chip brand">App Studio</div>
+          <h1 class="white-text" style="margin-top: 10px; margin-bottom: 8px;">Echoboard</h1>
+          <p class="flow-text" style="color: var(--text-muted);">
+            A modern, customizable soundboard. Record, edit, and trigger your own sounds—fast.
+          </p>
+          <div class="cta" style="margin-top: 24px;">
+            <a class="btn-large waves-effect waves-light" href="#download">
+              <i class="material-icons left">get_app</i> Get the app
+            </a>
+            <a class="btn-large white black-text waves-effect" href="/support.html" style="margin-left: 12px;">
+              <i class="material-icons left">help_outline</i> Support
+            </a>
+          </div>
+          <div class="badge-row" style="margin-top: 28px;">
+            <div class="row store-badges">
+              <div class="col s6 m5 l4">
+                <a id="play-badge" href="#" aria-label="Get it on Google Play">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" />
+                </a>
+              </div>
+              <div class="col s6 m5 l4">
+                <a id="appstore-badge" href="#" aria-label="Download on the App Store">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m5">
+          <div class="glass z-depth-2" style="padding: 16px; margin-top: 24px;">
+            <div class="center">
+              <i class="material-icons" style="font-size: 64px; color:#bdb7ff;">phone_iphone</i>
+              <h6 style="margin: 6px 0 2px; color: #e7e4ff;">Live Preview</h6>
+              <p style="color: var(--text-muted); margin: 0 0 10px;">App UI showcase</p>
+            </div>
+            <div class="card feature-card">
+              <div class="card-image">
+                <img src="https://placehold.co/900x600/png" alt="Echoboard screenshot" />
+              </div>
+            </div>
+            <p class="right-align" style="margin: 10px 0 0;">
+              <a href="#screens">See more screenshots →</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="section" style="padding-top: 48px;">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center">
+          <h4>Why Echoboard</h4>
+          <p class="grey-text text-darken-1">Tools that feel pro, without the friction.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 l4">
+          <div class="card hoverable feature-card">
+            <div class="card-content">
+              <div class="feature-icon"><i class="material-icons">fiber_manual_record</i></div>
+              <span class="card-title">Record & Edit</span>
+              <p>Capture audio instantly, trim precisely, and normalize levels for punchy playback.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card hoverable feature-card">
+            <div class="card-content">
+              <div class="feature-icon"><i class="material-icons">dashboard_customize</i></div>
+              <span class="card-title">Custom Boards</span>
+              <p>Create boards for shows, streams, classrooms, or quick personal sound bites.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card hoverable feature-card">
+            <div class="card-content">
+              <div class="feature-icon"><i class="material-icons">palette</i></div>
+              <span class="card-title">Themes</span>
+              <p>Match your vibe with clean, accessible themes (premium styles available).</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card hoverable feature-card">
+            <div class="card-content">
+              <div class="feature-icon"><i class="material-icons">bolt</i></div>
+              <span class="card-title">Low Latency</span>
+              <p>Snappy triggers and smooth animations so your timing always lands.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card hoverable feature-card">
+            <div class="card-content">
+              <div class="feature-icon"><i class="material-icons">offline_bolt</i></div>
+              <span class="card-title">Offline</span>
+              <p>Works even without a connection—your sounds are on-device.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card hoverable feature-card">
+            <div class="card-content">
+              <div class="feature-icon"><i class="material-icons">shield</i></div>
+              <span class="card-title">Privacy First</span>
+              <p>No account required. Minimal analytics. Your creations stay yours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section id="screens" class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center">
+          <h4>App Screens</h4>
+          <p class="grey-text text-darken-1">What you see is what you get.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 l4">
+          <div class="card hoverable feature-card">
+            <div class="card-image"><img src="https://placehold.co/800x1400/png" alt="Board view" /></div>
+            <div class="card-content"><span class="card-title">Board</span></div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card hoverable feature-card">
+            <div class="card-image"><img src="https://placehold.co/800x1400/png" alt="Editor view" /></div>
+            <div class="card-content"><span class="card-title">Editor</span></div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card hoverable feature-card">
+            <div class="card-image"><img src="https://placehold.co/800x1400/png" alt="Themes view" /></div>
+            <div class="card-content"><span class="card-title">Themes</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download / Links -->
+  <section id="download" class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="row glass z-depth-1" style="padding: 22px 16px;">
+        <div class="col s12 m8">
+          <h5 style="margin-top: 8px;">Get Echoboard</h5>
+          <p class="grey-text text-darken-1" style="margin-bottom: 0;">Available on iOS and Android. Tap a badge to install.</p>
+        </div>
+        <div class="col s12 m4 center">
+          <a class="btn waves-effect" style="background: var(--brand); margin: 8px;" href="/privacy.html">
+            <i class="material-icons left">policy</i> Privacy
+          </a>
+          <a class="btn-flat waves-effect" style="margin: 8px;" href="/support.html">
+            <i class="material-icons left">help_outline</i> Support
+          </a>
+        </div>
+      </div>
+
+      <div class="row store-badges" style="margin-top: 16px;">
+        <div class="col s6 center">
+          <a href="#" id="play-badge-2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" />
+          </a>
+        </div>
+        <div class="col s6 center">
+          <a href="#" id="appstore-badge-2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" />
+          </a>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 8px;">
+        <div class="col s12 center">
+          <p class="grey-text">Ads file: <a href="/app-ads.txt">/app-ads.txt</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    &copy; <span id="year"></span> My App Company
+    <div class="container">
+      <div class="row" style="margin-bottom: 0;">
+        <div class="col s12 m6 footer-links">
+          <a href="https://sites.google.com/view/echoboardprivacypolicy">Privacy</a> &nbsp;&middot;&nbsp;
+          <a href="/support.html">Support</a>
+        </div>
+        <div class="col s12 m6 right-align">
+          &copy; <span id="year"></span> Echoboard
+        </div>
+      </div>
+    </div>
   </footer>
 
+  <!-- Materialize JS (no SRI) -->
+  <script src="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/js/materialize.min.js"></script>
   <script>
-    // Auto-update year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elems);
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+
+    // TODO: replace with your real store URLs:
+    const playUrl = "https://play.google.com/store/apps/details?id=com.smedley.Echoboard";
+    const appStoreUrl = "https://apps.apple.com/us/app/echoboard/id6752585217";
+
+    ['play-badge', 'play-badge-2'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.setAttribute('href', playUrl);
+    });
+    ['appstore-badge', 'appstore-badge-2'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.setAttribute('href', appStoreUrl);
+    });
   </script>
 </body>
 </html>
