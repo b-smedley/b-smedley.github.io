@@ -3,67 +3,107 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Frameglow Support</title>
-<link rel="stylesheet" href="style.css">
+<title>Frameglow: a photo frame for Apple TV</title>
+<meta name="description" content="Frameglow turns your Apple TV into an ambient photo frame for your Amazon Photos shared albums, with the time, date and weather.">
+<meta property="og:title" content="Frameglow: a photo frame for Apple TV">
+<meta property="og:description" content="Your Amazon Photos shared albums, playing on the biggest screen in the house.">
+<meta property="og:image" content="https://b-smedley.github.io/frameglow/img/lake.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/icon.png">
+<link rel="stylesheet" href="landing.css">
 </head>
 <body>
+
+<div class="hero">
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="./"><img src="img/icon.png" alt="" width="640" height="384">Frameglow</a>
+      <nav>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <div class="hero-text">
+      <h1>Your TV, as a photo frame</h1>
+      <p class="lede">Frameglow plays your Amazon Photos shared albums on Apple TV as a slow, full-screen slideshow, with the time, the date each photo was taken, and the weather.</p>
+      <span class="pill">Coming soon to the App Store for Apple TV</span>
+      <p class="only">Works only with albums shared by link from Amazon Photos.</p>
+    </div>
+
+    <div class="tv">
+      <div class="screen"><img src="img/lake.jpg" alt="Frameglow showing a lakeside photo full screen, with a clock and the weather in the corner" width="1920" height="1080"></div>
+      <div class="stand"></div>
+      <div class="foot"></div>
+    </div>
+  </div>
+</div>
+
 <main>
-<h1>Frameglow</h1>
-<p class="meta">An ambient photo frame for Apple TV</p>
+  <section>
+    <div class="wrap split">
+      <div>
+        <h2>Add an album from your phone</h2>
+        <p class="sub">No account to sign in to on the TV, and nothing to type with the remote.</p>
+        <ol class="steps">
+          <li><strong>Copy a share link</strong><span>In Amazon Photos, open an album, choose Share, then Copy link.</span></li>
+          <li><strong>Scan the code on your TV</strong><span>Your phone opens a page served by your Apple TV, on your own Wi-Fi.</span></li>
+          <li><strong>Paste and send</strong><span>The album appears on the TV a moment later. Add as many as you like.</span></li>
+        </ol>
+      </div>
+      <img src="img/add-album.jpg" alt="Frameglow's welcome screen with a QR code to scan" width="1920" height="1080" loading="lazy">
+    </div>
+  </section>
 
-<p>Frameglow plays a slow, full-screen slideshow of your photos from Amazon Photos share
-links, with a clock, the date each photo was taken, and the local weather.</p>
+  <section>
+    <div class="wrap">
+      <h2>Made to sit in the background</h2>
+      <p class="sub">Quiet enough to leave on all evening, with just enough on screen to be useful.</p>
+      <div class="grid">
+        <div class="card"><h3>Slow pan and zoom</h3><p>Each photo drifts gently and crossfades into the next. Portrait photos sit over a soft blurred backdrop, not black bars.</p></div>
+        <div class="card"><h3>Clock and weather</h3><p>The time and current conditions for where you are, tucked in the corner.</p></div>
+        <div class="card"><h3>When it was taken</h3><p>The date, the album, and details like "3 years ago today".</p></div>
+        <div class="card"><h3>Stays up to date</h3><p>Photos added to a shared album show up on their own. If the internet drops, it keeps playing the photos it already has.</p></div>
+        <div class="card"><h3>Your pace</h3><p>Shuffle or play in date order, show each photo for 5 seconds to 5 minutes, and stop automatically after a few hours.</p></div>
+        <div class="card"><h3>Browse too</h3><p>Look through any album as a grid, view photos full screen, play videos, and see your photos in the Top Shelf.</p></div>
+      </div>
+    </div>
+  </section>
 
-<h2>Getting started</h2>
-<ol>
-<li>In the Amazon Photos app or website, open an album, choose <strong>Share</strong>,
-then <strong>Copy link</strong>. The link looks like
-<code>https://www.amazon.com/photos/shared/…</code></li>
-<li>Open Frameglow on your Apple TV and scan the QR code with your phone. Your phone must
-be on the same Wi-Fi network as the Apple TV.</li>
-<li>Paste the link and tap <strong>Send to TV</strong>.</li>
-</ol>
-<p>You can also type the link on the Apple TV itself. To see the app before adding
-anything, choose <strong>Watch a Sample Slideshow</strong>.</p>
+  <section>
+    <div class="wrap pair">
+      <img src="img/coast.jpg" alt="A coastal photo playing in Frameglow" width="1920" height="1080" loading="lazy">
+      <img src="img/bay.jpg" alt="A photo of a bay playing in Frameglow" width="1920" height="1080" loading="lazy">
+    </div>
+  </section>
 
-<h2>Common questions</h2>
+  <section class="price">
+    <div class="wrap">
+      <h2>Try it free. Pay once.</h2>
+      <p class="sub">No subscription, and nothing is charged automatically.</p>
+      <ul>
+        <li><span>Sample slideshow, browsing and adding albums</span><span>Always free</span></li>
+        <li><span>Ambient mode and slideshows</span><span>Free for 7 days</span></li>
+        <li><span>Keep them for good</span><span>One-time purchase</span></li>
+      </ul>
+    </div>
+  </section>
 
-<h3>The QR code page won't open on my phone</h3>
-<p>Check that the phone is on the same Wi-Fi network as the Apple TV and not on mobile
-data or a guest network. If tvOS asked whether Frameglow may find devices on your local
-network and you declined, allow it in Apple TV Settings → General → Privacy &amp;
-Security → Local Network.</p>
-
-<h3>Frameglow says my link isn't right</h3>
-<p>It needs a share link to an album, not the address of your own Amazon Photos library.
-Create one with Share → Copy link. Anyone with the link can view the album, so share it
-only with people you trust.</p>
-
-<h3>New photos aren't showing up</h3>
-<p>Albums refresh every few hours and when you open the app. To refresh right away, go to
-Settings → Refresh all albums.</p>
-
-<h3>The weather isn't showing</h3>
-<p>Weather needs Location Services. On the Apple TV, go to Settings → General → Privacy
-&amp; Security → Location Services, turn it on, and allow Frameglow.</p>
-
-<h3>How do the free trial and unlock work?</h3>
-<p>Browsing and adding albums is always free. Ambient mode and slideshows are free for 7
-days, then need a one-time purchase. There is no subscription and nothing is charged
-automatically. If you reinstall or get a new Apple TV, choose <strong>Restore
-Purchases</strong> in Settings.</p>
-
-<h3>Remote controls</h3>
-<p>During a slideshow: swipe left or right to change photos, click or press Play/Pause to
-pause, swipe down for photo details, and press Back to exit.</p>
-
-<h2>Contact</h2>
-<p>Email <a href="mailto:dedsmed@gmail.com">dedsmed@gmail.com</a> and include what you saw on
-screen.</p>
-
-<p class="meta"><a href="privacy.html">Privacy Policy</a> · Frameglow is not affiliated
-with or endorsed by Amazon. Amazon Photos is a trademark of Amazon.com, Inc. or its
-affiliates.</p>
+  <section>
+    <div class="wrap">
+      <h2>Private by design</h2>
+      <p class="sub">No account, no ads, no analytics, no tracking. Your photos go from Amazon to your Apple TV and nowhere else. Location is used only for the weather, and it's optional. <a href="privacy.html">Read the privacy policy</a>.</p>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a></p>
+    <p>Requires Apple TV with tvOS 17 or later and an Amazon Photos album shared by link.</p>
+    <p>Frameglow is not affiliated with or endorsed by Amazon. Amazon Photos is a trademark of Amazon.com, Inc. or its affiliates. Apple TV and App Store are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+
 </body>
 </html>
