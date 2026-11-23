@@ -10,11 +10,12 @@
 <main>
 <p class="nav"><a href="./">Frameglow</a> · <a href="support.html">Support</a></p>
 <h1>Privacy Policy</h1>
-<p class="meta">Effective November 12, 2026</p>
+<p class="meta">Effective November 23, 2026</p>
 
 <p>Frameglow is a photo frame app for Apple TV. It has no accounts, no ads, no analytics
-and no tracking. The developer runs no servers and receives no information about you or
-your photos.</p>
+and no tracking. The developer receives no information about you or your photos. The only
+server the developer runs passes album links from your phone to your TV and deletes them
+straight away (see below).</p>
 
 <h2>What stays on your Apple TV</h2>
 <ul>
@@ -44,10 +45,14 @@ with aggregate sales reports only.</li>
 </ul>
 
 <h2>Adding an album from your phone</h2>
-<p>While the Add Album screen is open, Frameglow serves a small web page on your home
-network so you can send a link from your phone by scanning a QR code. The link goes from
-your phone straight to your Apple TV. The page is not reachable from the internet and
-stops when you leave that screen.</p>
+<p>The Add Album screen shows a QR code and a short code. Scanning it opens a page on this
+website where you paste a share link. The link is sent to Frameglow's relay server
+(hosted on Cloudflare), held there only until your Apple TV collects it, usually within a
+few seconds, and then deleted. The result your phone shows (such as the album name) is
+deleted within 10 minutes. Codes expire after 10 minutes without use. The relay keeps no
+logs of links, and nothing it handles is linked to you, your device or your Apple ID.
+Cloudflare processes connections to the relay, including IP addresses, under
+Cloudflare's own privacy policy.</p>
 
 <h2>Children</h2>
 <p>Frameglow does not collect personal information from anyone, including children.</p>
