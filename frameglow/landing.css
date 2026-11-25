@@ -118,3 +118,16 @@ footer p { margin: 0 0 10px; }
   .price li { flex-direction: column; gap: 2px; }
   .price li span:last-child { text-align: left; }
 }
+
+/* Article pages (amazon-photos-apple-tv.html) */
+.article { max-width: 720px; }
+.article h2 { margin-top: 48px; }
+.article h2:first-child, .article .answer h2 { margin-top: 0; }
+.article h3 { margin: 28px 0 6px; font-size: 1.1rem; }
+.article p, .article ul { margin: 0 0 14px; }
+.article li { margin-bottom: 6px; }
+.article .note { color: var(--muted); }
+.article .pill { margin-top: 8px; }
+.answer { background: var(--bg-raised); border: 1px solid var(--rule); border-radius: 14px; padding: 24px 24px 12px; }
+.answer h2 { font-size: clamp(1.4rem, 3vw, 1.8rem); }
+.more { margin-top: 40px !important; }
