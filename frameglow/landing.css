@@ -54,6 +54,8 @@ h1 {
   color: #1b0a05;
   font-weight: 650;
 }
+a.pill { text-decoration: none; }
+a.pill:hover { background: var(--accent); }
 .only { margin: 16px 0 0; font-size: 0.9rem; color: var(--muted); }
 
 /* TV frame */
